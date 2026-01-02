@@ -1,52 +1,46 @@
-Cold Email Automation (Python + Gmail SMTP)
+# Cold Email Automation (Python + Gmail SMTP)
 
-A lightweight Python script to send personalized cold emails at scale using Gmail SMTP.
-Contacts are read from an Excel/CSV file and emails are customized per recipient.
+A lightweight Python automation script for sending personalized cold emails using Gmail SMTP.  
+It reads contact data from an Excel or CSV file and customizes emails for each recipient.
 
-Features
-	•	Read contacts from Excel or CSV
-	•	Personalized email content (name, company)
-	•	Secure Gmail SMTP authentication
-	•	Console-based delivery status logs
-	•	Simple, single-folder setup
+## Features
+- Read contacts from Excel or CSV
+- Personalized email content using name and company
+- Secure Gmail SMTP authentication
+- Console-based email delivery logs
+- Simple single-folder setup
 
-Requirements
-	•	Python 3.x
-	•	Gmail account (App Password required if 2FA is enabled)
+## Requirements
+- Python 3.x
+- Gmail account (App Password required if 2FA is enabled)
 
-Dependencies
-
+## Dependencies
 pip install pandas openpyxl
 
-Project Structure
-
+## Project Structure
 .
 ├── contacts.xlsx
 ├── email_script.py
 └── README.md
 
-Contact File Format (contacts.xlsx)
+## Contact File Format (contacts.xlsx)
+First Name | Company Name | mailid
+John       | OpenAI       | john@example.com
+Sarah      | DataCorp     | sarah@example.org
 
-First Name	Company Name	mailid
-John	OpenAI	john@example.com
-Sarah	DataCorp	sarah@example.org
+## Usage
+1. Update contacts.xlsx with recipient details
+2. Open email_script.py and set YOUR_EMAIL and YOUR_PASSWORD
+   Use a Gmail App Password if 2FA is enabled
+3. Run the script:
+   python email_script.py
 
-Usage
-	1.	Update contacts.xlsx with recipient data
-	2.	Set YOUR_EMAIL and YOUR_PASSWORD in email_script.py
-	•	Use a Gmail App Password if 2FA is enabled
-	3.	Run the script:
+## Gmail Sending Limits
+Personal Gmail: 500 recipients/day  
+Google Workspace: 2,000 recipients/day  
+Workspace Trial: 500 recipients/day  
 
-python email_script.py
-
-Gmail Sending Limits
-
-Account Type	Max Recipients/Day
-Personal Gmail	500
-Google Workspace	2,000
-Workspace Trial	500
-
-Best Practices
-	•	Add delays between emails to avoid spam detection
-	•	Send in small batches (50–100 emails per run)
-	•	Use professional email services or Gmail API for large-scale campaigns
+## Best Practices
+- Add delays between emails to avoid spam detection
+- Send emails in small batches (50–100 per run)
+- Use Gmail API or professional email services for large-scale campaigns
