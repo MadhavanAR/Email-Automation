@@ -17,12 +17,6 @@ It reads contact data from an Excel or CSV file and customizes emails for each r
 ## Dependencies
 pip install pandas openpyxl
 
-## Project Structure
-.
-├── contacts.xlsx
-├── email_script.py
-└── README.md
-
 ## Contact File Format (contacts.xlsx)
 First Name | Company Name | mailid
 John       | OpenAI       | john@example.com
